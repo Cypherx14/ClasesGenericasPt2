@@ -1,6 +1,6 @@
 package org.alexc.genericsclasses;
 
-public class Automovil {
+public class Automovil implements TransportableporCamion{
     private String marca;
 
     public Automovil(String marca) {
@@ -12,4 +12,8 @@ public class Automovil {
     }
 
 
+    @Override
+    public void imprimir() {
+        System.out.println(this.getMarca());
+    }
 }

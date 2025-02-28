@@ -1,6 +1,6 @@
 package org.alexc.genericsclasses;
 
-public class Animal {
+public class Animal implements TransportableporCamion{
     private String nombre;
     private String tipo;
 
@@ -23,5 +23,10 @@ public class Animal {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    @Override
+    public void imprimir() {
+        System.out.println(this.getNombre() + " tipo "+ this.getTipo());
     }
 }

@@ -1,6 +1,6 @@
 package org.alexc.genericsclasses;
 
-public class Maquinaria {
+public class Maquinaria implements TransportableporCamion{
     private String tipo;
 
     public Maquinaria(String tipo) {
@@ -11,4 +11,8 @@ public class Maquinaria {
         return tipo;
     }
 
+    @Override
+    public void imprimir() {
+        System.out.println(this.getTipo());
+    }
 }
