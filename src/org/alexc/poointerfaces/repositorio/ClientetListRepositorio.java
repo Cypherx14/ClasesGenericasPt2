@@ -5,11 +5,14 @@ import org.alexc.poointerfaces.modelo.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio{
 
-    private List<Cliente> datasource;
+//hasta aqui las interfaces ya utilizan genericos
+//pero se puede hacer más generico haciendo la clase abstracta
+public class ClientetListRepositorio<T> implements OrdenablePaginableCrudRepositorio<Cliente>{
 
-    public ClienteListRepositorio() {
+    protected List<Cliente> datasource;
+
+    public ClientetListRepositorio() {
         this.datasource = new ArrayList<>();
     }
 

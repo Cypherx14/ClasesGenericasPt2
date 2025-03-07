@@ -2,12 +2,14 @@ package org.alexc.poointerfaces;
 
 import org.alexc.poointerfaces.modelo.Cliente;
 import org.alexc.poointerfaces.repositorio.*;
+import org.alexc.poointerfaces.repositorio.lista.ClienteListRepositorioFinal;
 
 import java.util.List;
 
 public class EjemploRepositorio {
     public static void main(String[] args) {
-        OrdenablePaginableCrudRepositorio repo = new ClienteListRepositorio();
+//        OrdenablePaginableCrudRepositorio repo = new AbstractListRepositorio();
+        OrdenablePaginableCrudRepositorio<Cliente> repo = new ClienteListRepositorioFinal();
         repo.crear(new Cliente("Alex", "Coro"));
         repo.crear(new Cliente("Jano", "Perez"));
         repo.crear(new Cliente("Luz", "Martinez"));
